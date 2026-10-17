@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Segoe UI", system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .accueil-entree {
+    animation: accueil-entree 560ms ease both;
+  }
+}
+
+@keyframes accueil-entree {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-source-serif), Georgia, serif;
+}
