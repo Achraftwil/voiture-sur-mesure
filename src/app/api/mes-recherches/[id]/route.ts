@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 import { clientCookieName, emailFromClientSession } from "@/lib/client-session";
 import { lireDemandeSaisie, saisiePourBase } from "@/lib/demande-saisie";
 import { getSupabase } from "@/lib/supabase";
-
 export async function PATCH(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   if (!/^[0-9a-f-]{36}$/.test(id)) {
